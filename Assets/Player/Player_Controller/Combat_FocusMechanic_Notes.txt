@@ -1,0 +1,228 @@
+Combat Focus Mechanic Notes
+
+Document Purpose
+This document records the currently agreed design for the player's Focus resource in the combat prototype.
+It is intended as a stable reference before continuing into stagger design and combat scripting.
+
+========================================
+1. Core Role Of Focus
+========================================
+
+Focus is the player's main combat resource.
+It exists to give the player:
+- subjective initiative
+- action priority
+- a reason to choose between light attacks, heavy attacks, defense, and finishers
+
+Without Focus, all offensive and defensive tools would compete on equal footing and the combat loop would lack hierarchy.
+
+Focus should therefore act as:
+- a tempo resource
+- a reward for correct offensive and defensive play
+- a gate for higher-value combat actions
+
+========================================
+2. Focus Capacity
+========================================
+
+Focus is divided into three segments.
+
+Rules:
+- Maximum Focus = 3 segments
+- Each segment is a meaningful spending unit
+
+Basic spending idea:
+- 1 segment = one standard heavy attack
+
+========================================
+3. Focus Generation
+========================================
+
+Focus is mainly earned through active and successful combat actions.
+It should not be a passive recovery resource.
+
+Current proposed generation values:
+
+- Light attack hit: +0.25
+- Run attack hit: +0.5
+- Heavy attack hit: +0.1
+- Perfect dodge: +0.5
+- Perfect dodge followed by a successful punish within a short time: additional +0.5
+- Successful parry: +1
+- Successful parry counter hit: additional +0.5
+- Execution: +1
+- Effective follow-up on a staggered enemy: +0.25
+
+Design intention:
+- Light attacks are the main stable Focus builder
+- Run attacks accelerate tempo
+- Perfect dodge and parry are high-skill accelerators
+- Heavy attack can refund a small amount but must never sustain itself
+- Execution is a tempo reward
+
+========================================
+4. Dodge And Focus
+========================================
+
+Normal dodge should not grant Focus.
+
+Current rule:
+- Normal dodge: +0
+- Perfect dodge: +0.5
+- If the player successfully punishes shortly after a perfect dodge: additional +0.5
+
+Design reason:
+- Prevent players from farming Focus by repeatedly dodging without engaging
+- Reward defense only when it leads back into offense
+
+========================================
+5. Parry And Focus
+========================================
+
+Parry should be more rewarding than dodge because it is riskier and more proactive.
+
+Current rule:
+- Regular guard: +0
+- Successful timed parry: +1
+- Successful parry counter hit afterward: additional +0.5
+
+Design reason:
+- Dodge is the safer answer
+- Parry is the higher-reward answer
+
+========================================
+6. Passive Recovery
+========================================
+
+Focus should not slowly regenerate during battle.
+
+Current rule:
+- No passive auto-recovery during combat
+
+Design reason:
+- Focus must feel earned through combat actions
+- Prevent players from disengaging and waiting for resources to refill
+
+========================================
+7. Focus At Maximum
+========================================
+
+Focus reaching full should not feel wasteful.
+A full gauge should increase pressure to spend it efficiently.
+
+Current design direction:
+- Full Focus should enable stronger spending options
+- Higher-tier attacks should become available or more efficient when Focus is full
+
+Recommended tier structure:
+- 1 segment: standard heavy attack
+- 2 segments: stronger heavy / higher stagger / stronger break attack
+- 3 segments: special finisher-level attack or wave attack
+
+Design reason:
+- Full Focus creates meaningful decision pressure
+- Spending higher amounts should feel like stronger tempo conversion
+
+========================================
+8. Focus Decay Out Of Combat
+========================================
+
+Focus must not be permanently banked before elite fights.
+However, it also should not disappear instantly in a way that feels bad.
+
+Current rule:
+- Focus does not persist indefinitely between combat encounters
+- Focus starts decaying 2 seconds after leaving combat
+- Focus decays at 1 segment per second
+- Minimum retained Focus after full decay: 0
+
+Design reason:
+- Prevent pre-farming Focus on weak enemies before stronger encounters
+- Keep Focus as an in-combat tempo resource, not a stockpiled reserve
+
+Important consequence:
+- Focus is a battle rhythm resource, not a preparation resource
+
+========================================
+9. Heavy Attack Relationship To Focus
+========================================
+
+Heavy attacks are resource spenders, not primary generators.
+However, they may refund a small amount on hit.
+
+Current rule:
+- Standard heavy attack costs 1 Focus
+- Heavy attack hit may refund a small amount such as +0.1
+
+Design reason:
+- Heavy attacks should not feel like pure loss
+- Heavy attacks must never become self-sustaining loops
+
+========================================
+10. Wave Attack Role
+========================================
+
+Wave attack should not be treated as a basic light attack.
+It should also not be totally disconnected from the Focus system.
+
+Current agreed direction:
+- Wave attack belongs to a higher-tier offensive branch
+- It is closer to a special finisher or advanced heavy attack than to a normal light attack
+
+Recommended role:
+- Special finisher attack
+- High-value resource spender
+- Safe ender / ranged pressure ender / stagger conversion tool
+
+Recommended cost direction:
+- Prefer 3 Focus for the full version
+- A reduced or downgraded version may be used if Focus is insufficient, but the preferred design is that the true wave attack is a Focus-based finisher
+
+Design reason:
+- Prevent wave attack from becoming a low-cost spam tool
+- Preserve the value of Focus as a priority-setting resource
+
+========================================
+11. Player Decision Hierarchy Created By Focus
+========================================
+
+Focus should create a natural action priority structure.
+
+Current intended hierarchy:
+
+- Light attack:
+  Build Focus and chip enemy stagger
+
+- Run attack:
+  Re-enter tempo and build Focus faster
+
+- Heavy attack:
+  Spend Focus for higher stagger, interruption, and pressure
+
+- Dodge:
+  Safe defense, with perfect dodge enabling better Focus gain
+
+- Parry:
+  High-risk, high-reward defense and strong Focus gain
+
+- Execution:
+  Reward after successful pressure and stagger conversion
+
+- Wave / finisher attack:
+  High-value spend option, likely tied to full or near-full Focus
+
+========================================
+12. Summary
+========================================
+
+The Focus system is currently defined as follows:
+
+- Three total segments
+- Built mainly through successful offense and high-quality defense
+- No passive combat regeneration
+- Decays after leaving combat
+- Heavy attacks consume it
+- Wave attack should be a higher-tier finisher that meaningfully interacts with Focus
+- The purpose of Focus is to create player initiative, action priority, and combat planning
+
+This Focus design is now considered the current working baseline for the combat prototype.

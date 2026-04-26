@@ -1,0 +1,227 @@
+Player WASD Rework Plan
+
+Document Purpose
+This document records the new change of direction for the current casual movement animator and controller.
+The previous Back-based movement logic is being removed.
+The new goal is to use WASD as directional facing input, where the character always moves forward toward the selected direction.
+If two adjacent direction keys are pressed at the same time, the movement direction becomes a 45-degree diagonal.
+
+========================================
+1. Core Design Change
+========================================
+
+Old idea:
+- Animator distinguishes between front and back movement
+- Example states:
+  - Jog
+  - Jog_Back
+  - Dash
+  - Dash_Back
+
+New idea:
+- Remove Back actions from the current animator
+- WASD determines the target facing direction
+- The character rotates toward that direction
+- The character then plays a forward movement animation while moving in that direction
+
+In short:
+- Input no longer means "play front or back animation"
+- Input now means "choose movement direction in space"
+
+========================================
+2. New Input Interpretation
+========================================
+
+The input should now be treated as directional movement on four cardinal directions plus four diagonals.
+
+Single key directions:
+- W = 0 degrees
+- D = 90 degrees
+- S = 180 degrees
+- A = 270 degrees
+
+Adjacent key combinations:
+- W + D = 45 degrees
+- D + S = 135 degrees
+- S + A = 225 degrees
+- A + W = 315 degrees
+
+Important rule:
+- Only adjacent directional pairs should produce a diagonal
+- Opposite pairs should cancel each other
+
+Examples:
+- W + S = no directional movement
+- A + D = no directional movement
+
+========================================
+3. Animator Simplification
+========================================
+
+The animator should no longer express front/back locomotion.
+It should only express:
+- Idle
+- Forward Jog
+- Forward Boost
+
+Recommended simplified MoveMode meaning:
+- 0 = Idle
+- 1 = Jog
+- 2 = Boost
+
+This means the current Back-related states should be removed from the current casual animator.
+
+States to remove:
+- Jog_Back
+- Dash_Back
+
+Any direct logic or transition that depends on backward movement clips should also be removed.
+
+The movement direction should be handled by character rotation and script movement, not by separate forward/back animation clips.
+
+========================================
+4. New Animator Logic Direction
+========================================
+
+Animator responsibility after this change:
+- Idle when there is no valid move input
+- Jog when movement input exists and Shift is not pressed
+- Boost when movement input exists and Shift is pressed
+
+Animator no longer needs:
+- MoveY to distinguish forward and backward clips
+- Any Back-state conditions
+- Any turn-specific bridging logic
+- Any boost stop trigger logic if stop transitions are now handled by empty transitions
+
+Recommended minimal animator parameter set:
+- CombatMode (bool)
+- HasMoveInput (bool)
+- MoveMode (int)
+
+Optional:
+- MoveSpeed (float), only if needed later for blend tuning
+
+No current need for:
+- TurnVariant
+- Turn180
+- BoostStop
+- MoveY for front/back selection
+
+========================================
+5. Script Rework Direction
+========================================
+
+The player script should be updated from front/back state driving to directional vector driving.
+
+Old script mindset:
+- Read W and S mainly as front/back intent
+- Write MoveY into the animator
+- Switch between Jog and Jog_Back, Dash and Dash_Back
+
+New script mindset:
+- Read WASD as a 2D movement vector
+- Convert input into a world-space target direction
+- Rotate the character toward that target direction
+- Move the character forward along that direction
+- Animator only needs to know whether movement exists and whether the mode is Jog or Boost
+
+========================================
+6. Recommended New Runtime Data
+========================================
+
+The movement script should maintain:
+- 2D input vector from WASD
+- Whether input is valid
+- Current MoveMode
+- Current target movement direction in world space
+- Current movement speed
+
+Suggested interpretation:
+- No valid input = MoveMode 0
+- Valid input without Shift = MoveMode 1
+- Valid input with Shift = MoveMode 2
+
+This is much more direct and less error-prone than using mode memory plus front/back transitions.
+
+========================================
+7. Recommended Script Behavior
+========================================
+
+7.1 Input Read
+- Read W, A, S, D
+- Build a 2D direction vector
+- Normalize the vector if needed
+
+Examples:
+- W -> (0, 1)
+- S -> (0, -1)
+- A -> (-1, 0)
+- D -> (1, 0)
+- W + D -> (1, 1) normalized
+
+7.2 Mode Selection
+- If no directional input:
+  - MoveMode = 0
+- If directional input and Shift not held:
+  - MoveMode = 1
+- If directional input and Shift held:
+  - MoveMode = 2
+
+7.3 Rotation
+- Convert the input vector into a world-space movement direction
+- Rotate the player toward that direction
+- Rotation can be smoothed with RotateTowards or Slerp
+
+7.4 Movement
+- Move along the selected direction
+- Use Jog speed when MoveMode = 1
+- Use Boost speed when MoveMode = 2
+- Use no movement when MoveMode = 0
+
+========================================
+8. Practical Animator Impact
+========================================
+
+After this rework, the casual animator becomes much easier to maintain.
+
+Expected result:
+- Fewer states
+- Fewer transitions
+- Fewer conditions
+- Much lower chance of input edge cases causing state mismatch
+
+This is especially useful for a fast demo because:
+- Movement becomes more readable
+- Debugging becomes easier
+- Controller behavior matches common action-game movement expectations
+
+========================================
+9. Recommended Cleanup List
+========================================
+
+Animator cleanup:
+- Remove Jog_Back
+- Remove Dash_Back
+- Remove any transition conditioned on backward movement
+- Remove any parameter only used by front/back splitting
+
+Script cleanup:
+- Remove MoveY-driven front/back logic
+- Remove backward-state assumptions
+- Replace W/S-only movement interpretation with full WASD vector interpretation
+- Replace front/back branch logic with directional facing logic
+
+========================================
+10. Final Direction Summary
+========================================
+
+The new design direction is:
+- Remove Back movement states from the current animator
+- Treat WASD as direction selection
+- Treat adjacent key pairs as diagonal 45-degree movement
+- Rotate the character toward the chosen direction
+- Always play forward locomotion animations for actual movement
+- Keep animator focused on Idle / Jog / Boost only
+
+This change should make both the animator and the control script simpler, cleaner, and more stable for the demo.

@@ -1,0 +1,275 @@
+Player Camera Relative Movement Plan
+
+Document Purpose
+This document explains the current issue in the player's movement script and records the implementation plan for changing the controller into a camera-relative omnidirectional movement system.
+The intended result is a third-person action movement style similar to Genshin Impact:
+- Input directions are interpreted relative to the camera
+- The camera view should not rotate just because the player presses A, S, or D
+- The character should rotate toward the chosen move direction
+- The character should move freely in 8 directions based on WASD
+
+========================================
+1. Current Problem Summary
+========================================
+
+Current observed issue:
+- Pressing A should make the player move to the left of the camera view
+- The camera view itself should remain stable
+- The model should side-step or turn toward the left movement direction
+
+Current actual behavior:
+- Pressing A makes the camera rotate left by about 90 degrees
+- The model still appears to keep its back toward the camera
+- This does not feel like omnidirectional third-person movement
+
+========================================
+2. Root Cause Analysis
+========================================
+
+The problem comes from two current design choices in the script.
+
+2.1 World-fixed movement direction
+The current script interprets WASD as fixed world directions:
+- W = world +Z
+- S = world -Z
+- A = world -X
+- D = world +X
+
+This means input is not camera-relative.
+So pressing A does not mean "move to the left of the current camera view".
+It means "move toward world left".
+
+That is not how a modern third-person action controller usually works.
+
+2.2 Rotating the player root transform directly
+The current script rotates the root transform directly:
+- transform.rotation is changed to face the movement direction
+
+This is risky because:
+- The player root is often also used by the camera follow or look target
+- If the camera system depends on that transform, rotating it changes the camera behavior too
+
+This is the likely reason why the camera appears to rotate when A is pressed.
+
+========================================
+3. Intended New Movement Behavior
+========================================
+
+The new system should behave like this:
+
+- W = move toward the camera's forward direction on the ground plane
+- S = move toward the camera's backward direction on the ground plane
+- A = move toward the camera's left direction on the ground plane
+- D = move toward the camera's right direction on the ground plane
+
+Adjacent keys:
+- W + D = move toward the camera's forward-right diagonal
+- D + S = move toward the camera's backward-right diagonal
+- S + A = move toward the camera's backward-left diagonal
+- A + W = move toward the camera's forward-left diagonal
+
+Opposite keys:
+- W + S cancel each other
+- A + D cancel each other
+
+The result should feel like free 8-direction movement under a third-person camera.
+
+========================================
+4. Core Design Goal
+========================================
+
+The movement controller should be changed from:
+- world-axis movement
+
+to:
+- camera-relative movement
+
+The character should always move relative to the current viewing direction of the camera, not relative to the global world axes.
+
+========================================
+5. Recommended Implementation Structure
+========================================
+
+The implementation should follow four steps:
+
+1. Read WASD as a 2D input vector
+2. Convert that input into a camera-relative world-space direction
+3. Move the character in that world-space direction
+4. Rotate the visual character toward the move direction
+
+========================================
+6. Input Handling Plan
+========================================
+
+The script should read WASD and build a 2D input vector:
+
+- X axis:
+  - A = -1
+  - D = +1
+
+- Y axis:
+  - S = -1
+  - W = +1
+
+Examples:
+- W -> (0, 1)
+- A -> (-1, 0)
+- D -> (1, 0)
+- S -> (0, -1)
+- W + A -> (-1, 1)
+
+When both axes are active:
+- Normalize the vector
+- This prevents diagonal movement from being faster than straight movement
+
+========================================
+7. Camera-relative Direction Conversion
+========================================
+
+The script should reference a camera transform.
+
+Recommended new reference:
+- cameraTransform
+
+The script should extract:
+- cameraForward = cameraTransform.forward
+- cameraRight = cameraTransform.right
+
+Then flatten them onto the ground plane:
+- Set Y to 0
+- Normalize again
+
+This ensures movement stays horizontal and does not inherit camera pitch.
+
+Then compute movement direction:
+- moveDirection = cameraForward * inputY + cameraRight * inputX
+
+This is the most important part of the new system.
+
+Result:
+- Pressing A means moving to the left side of the camera
+- Pressing W means moving in the forward viewing direction of the camera
+- Diagonals naturally become 45-degree movement relative to the camera
+
+========================================
+8. Movement Execution Plan
+========================================
+
+After obtaining the final world-space move direction:
+
+- If there is no valid move input:
+  - MoveMode = 0
+  - No movement
+
+- If there is move input and Shift is not pressed:
+  - MoveMode = 1
+  - Use Jog speed
+
+- If there is move input and Shift is pressed:
+  - MoveMode = 2
+  - Use Boost speed
+
+The CharacterController should move along the computed camera-relative direction.
+
+Current speed behavior can remain:
+- Jog uses jogSpeed
+- Boost uses boostSpeed
+- Idle uses 0 speed
+
+========================================
+9. Rotation Plan
+========================================
+
+The character should rotate toward the computed movement direction.
+
+Important recommendation:
+- Do not rotate the same transform that the camera system uses as its follow or look root, if possible
+
+Best practice:
+- Move the player root
+- Rotate a separate visual/model transform
+
+Recommended new reference:
+- visualRoot
+
+This means:
+- Player root handles movement and collision
+- visualRoot handles visible character facing
+- cameraTransform remains independent
+
+This avoids the camera being dragged around by player facing updates.
+
+========================================
+10. Recommended Hierarchy Direction
+========================================
+
+Recommended player hierarchy concept:
+
+- PlayerRoot
+- ModelRoot
+- CameraFollowTarget
+
+Suggested roles:
+
+PlayerRoot:
+- CharacterController
+- Main movement script
+- Actual world position
+
+ModelRoot:
+- Visible character mesh / rig
+- Rotated toward movement direction
+
+CameraFollowTarget:
+- Used by camera system as a stable follow anchor
+- Should not be rotated in a way that breaks camera framing
+
+This structure is much safer than rotating the entire player root object directly.
+
+========================================
+11. Animator Impact
+========================================
+
+The animator does not need major expansion for this change.
+
+It can remain simple:
+- CombatMode (bool)
+- HasMoveInput (bool)
+- MoveMode (int)
+
+MoveMode meaning:
+- 0 = Idle
+- 1 = Jog
+- 2 = Boost
+
+Since movement direction is now solved by the character's orientation in world space, the animator does not need:
+- Back states
+- Direction-specific front/back clip switching
+
+The same forward locomotion clips can continue to be used.
+
+========================================
+12. Expected Final Result
+========================================
+
+After this rework:
+
+- Pressing A makes the player move to the camera's left
+- The camera should not rotate 90 degrees as a side effect
+- The character should rotate toward the movement direction
+- The character should support 8-direction movement
+- The controller should feel closer to a standard third-person action RPG
+
+========================================
+13. Recommended Next Implementation Step
+========================================
+
+The next script update should do the following:
+
+- Add a cameraTransform reference
+- Optionally add a visualRoot reference
+- Replace world-axis WASD direction logic with camera-relative direction logic
+- Rotate the visual character toward move direction
+- Keep the camera orientation independent from player root turning
+
+This should be the basis for achieving the intended omnidirectional movement behavior.

@@ -1,0 +1,888 @@
+Using pre-set license
+Built from '6000.1/staging' branch; Version is '6000.1.0f1 (9ea152932a88) revision 10395986'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'zh' Physical Memory: 15774 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+Date: 2026-04-26T08:38:49Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.1.0f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker4
+-projectPath
+D:/Github Repo/ACT/ACT
+-logFile
+Logs/AssetImportWorker4.log
+-srvPort
+52669
+-job-worker-count
+7
+-background-job-worker-count
+8
+-gc-helper-count
+1
+-name
+AssetImport
+Successfully changed project path to: D:/Github Repo/ACT/ACT
+D:/Github Repo/ACT/ACT
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [21272]  Target information:
+
+Player connection [21272]  * "[IP] 172.21.48.1 [Port] 0 [Flags] 2 [Guid] 934366517 [EditorId] 934366517 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-D1LDV55) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [21272]  * "[IP] 10.0.0.71 [Port] 0 [Flags] 2 [Guid] 934366517 [EditorId] 934366517 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-D1LDV55) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [21272] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [21272] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 7
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 183.87 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.1.0f1 (9ea152932a88)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.1.0f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Github Repo/ACT/ACT/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:         Direct3D 12 [level 12.1]
+    Renderer:        AMD Radeon RX 6800M (ID=0x73df)
+    Vendor:          ATI
+    VRAM:            12242 MB
+    App VRAM Budget: 11474 MB
+    Driver:          32.0.21043.1005
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.1.0f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.1.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.1.0f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56460
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.1.0f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.1.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003001 seconds.
+- Loaded All Assemblies, in  1.383 seconds
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.311 seconds
+Domain Reload Profiling: 1691ms
+	BeginReloadAssembly (140ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (180ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (46ms)
+	LoadAllAssembliesAndSetupDomain (1005ms)
+		LoadAssemblies (137ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (1002ms)
+			TypeCache.Refresh (1000ms)
+				TypeCache.ScanAssembly (786ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (311ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (270ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (51ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (44ms)
+			ProcessInitializeOnLoadAttributes (115ms)
+			ProcessInitializeOnLoadMethodAttributes (56ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.809 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.30 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 1.56 ms, found 4 plugins.
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-ACT
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.773 seconds
+Domain Reload Profiling: 1579ms
+	BeginReloadAssembly (167ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (557ms)
+		LoadAssemblies (398ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (259ms)
+			TypeCache.Refresh (192ms)
+				TypeCache.ScanAssembly (172ms)
+			BuildScriptInfoCaches (50ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (774ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (568ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (102ms)
+			ProcessInitializeOnLoadAttributes (361ms)
+			ProcessInitializeOnLoadMethodAttributes (92ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 1.23 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 238 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7111 unused Assets / (4.6 MB). Loaded Objects now: 7835.
+Memory consumption went from 180.7 MB to 176.1 MB.
+Total: 9.324000 ms (FindLiveObjects: 0.892100 ms CreateObjectMapping: 0.480500 ms MarkObjects: 5.051800 ms  DeleteObjects: 2.898400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 44574.205635 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/07_Roll/03_Roll_to_Run/Roll_to_Run_Fast_F.anim
+  artifactKey: Guid(b7455742515a003458b1ef29ff9b50ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/07_Roll/03_Roll_to_Run/Roll_to_Run_Fast_F.anim using Guid(b7455742515a003458b1ef29ff9b50ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bbf2152363c90a63450cefa0be176821') in 0.0488985 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.988900 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/07_Roll/04_Roll_Combat_to_Run/Roll_Combat_to_Run_Fast.anim
+  artifactKey: Guid(2ec0280bd9c4bf74993e43c84b1003a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/07_Roll/04_Roll_Combat_to_Run/Roll_Combat_to_Run_Fast.anim using Guid(2ec0280bd9c4bf74993e43c84b1003a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1d22405c5bd360cf6346cd3d7283dfc1') in 0.0210689 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.475704 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/06_Dodge/05_Dodge_to_Run/Dodge_to_Run_Fast_F.anim
+  artifactKey: Guid(b3710970f28fb8246817555367f5728f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/06_Dodge/05_Dodge_to_Run/Dodge_to_Run_Fast_F.anim using Guid(b3710970f28fb8246817555367f5728f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '410ca0128ed54668b30dfcc0ac52c6f2') in 0.0148239 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.308230 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/06_Dodge/06_Dodge_Combat_to_Run/Dodge_Combat_to_Run_Fast_F.anim
+  artifactKey: Guid(6a5e2f980815cbf4da4f1d73889f0251) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/06_Dodge/06_Dodge_Combat_to_Run/Dodge_Combat_to_Run_Fast_F.anim using Guid(6a5e2f980815cbf4da4f1d73889f0251) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '99bb02496efdf035b30c6605daf868e5') in 0.0163936 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.886103 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/01_Run_RM/11_Run_Fast_RM
+  artifactKey: Guid(60194ad2cbd334f4a90fb03c9e4e15e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/01_Run_RM/11_Run_Fast_RM using Guid(60194ad2cbd334f4a90fb03c9e4e15e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b5e0c795dcea79b61229103e3b61e5c0') in 0.0009273 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.822073 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/03_Run_to_Run_Combat/Run_to_Run_Combat.fbx
+  artifactKey: Guid(ddca19bf9248fc847818c769f10df9af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/03_Run_to_Run_Combat/Run_to_Run_Combat.fbx using Guid(ddca19bf9248fc847818c769f10df9af) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6b4187bad35fcf4201eb79aea5e3a17c') in 0.0262674 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.800 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.16 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.926 seconds
+Domain Reload Profiling: 1726ms
+	BeginReloadAssembly (250ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (69ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (475ms)
+		LoadAssemblies (409ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (189ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (167ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (927ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (665ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (109ms)
+			ProcessInitializeOnLoadAttributes (392ms)
+			ProcessInitializeOnLoadMethodAttributes (146ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (27ms)
+Refreshing native plugins compatible for Editor in 2.02 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7107 unused Assets / (5.1 MB). Loaded Objects now: 7854.
+Memory consumption went from 152.3 MB to 147.2 MB.
+Total: 24.746200 ms (FindLiveObjects: 1.281700 ms CreateObjectMapping: 1.637100 ms MarkObjects: 13.300000 ms  DeleteObjects: 8.523600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 56.278294 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/06_Run_Combat_B_180_RM/Run_Combat_Loop_B_180_RM.fbx
+  artifactKey: Guid(e874a6c51ddb77e4ea2d6a30247d4101) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/06_Run_Combat_B_180_RM/Run_Combat_Loop_B_180_RM.fbx using Guid(e874a6c51ddb77e4ea2d6a30247d4101) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e6e38b87db08fb666789c2292b5e7d61') in 0.0397886 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/08_Run_Combat_B_R_45_RM/Run_Combat_Loop_B_R_45_RM.fbx
+  artifactKey: Guid(e6be7fedbd72fd448bd556a1f67ed100) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/08_Run_Combat_B_R_45_RM/Run_Combat_Loop_B_R_45_RM.fbx using Guid(e6be7fedbd72fd448bd556a1f67ed100) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '414d2d0581837aca7a72969b4183e0d6') in 0.0056836 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/10_Run_Combat_B_R_90_RM/Run_Combat_Loop_B_R_90_RM.fbx
+  artifactKey: Guid(6c8ff327ea616704aa715c3316eba05d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/10_Run_Combat_B_R_90_RM/Run_Combat_Loop_B_R_90_RM.fbx using Guid(6c8ff327ea616704aa715c3316eba05d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3d74fab401850254922363508bc61346') in 0.0056201 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/02_Run_Combat_F_L_45_RM/Run_Combat_Loop_F_L_45_RM.fbx
+  artifactKey: Guid(c3045552ac4b85348913010ff63118db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/02_Run_Combat_F_L_45_RM/Run_Combat_Loop_F_L_45_RM.fbx using Guid(c3045552ac4b85348913010ff63118db) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ab7fe93b515b29d4922314fdb355b931') in 0.0053613 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/03_Run_Combat_F_R_45_RM/Run_Combat_Loop_F_R_45_RM.fbx
+  artifactKey: Guid(f90402709ad5252438b2ffe4c2e7b09d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/03_Run_Combat_F_R_45_RM/Run_Combat_Loop_F_R_45_RM.fbx using Guid(f90402709ad5252438b2ffe4c2e7b09d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '133a45e9b7438aa44714e4343290f211') in 0.0057159 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/05_Run_Combat_F_R_90_RM/Run_Combat_Loop_F_R_90_RM.fbx
+  artifactKey: Guid(2b557fa322c866847a0aa095ef36f21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/05_Run_Combat_F_R_90_RM/Run_Combat_Loop_F_R_90_RM.fbx using Guid(2b557fa322c866847a0aa095ef36f21a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8209ff3ddc7ae8b4f8236e25f8f592c8') in 0.0055045 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/09_Run_Combat_B_L_90_RM/Run_Combat_Start_B_L_90_RM.fbx
+  artifactKey: Guid(2a54b83eebfe82342bf421a453994d7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/09_Run_Combat_B_L_90_RM/Run_Combat_Start_B_L_90_RM.fbx using Guid(2a54b83eebfe82342bf421a453994d7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8b47b98701891074e0529502ae6f6fb3') in 0.0047619 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/10_Run_Combat_B_R_90_RM/Run_Combat_Start_B_R_90_RM.fbx
+  artifactKey: Guid(f90f7ecd29720134391084215900a6a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/10_Run_Combat_B_R_90_RM/Run_Combat_Start_B_R_90_RM.fbx using Guid(f90f7ecd29720134391084215900a6a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6dc0b9ad4196909ff8ff4bc214eda656') in 0.005339 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/01_Run_Combat_F_0_RM/Run_Combat_Start_F_0_RM.fbx
+  artifactKey: Guid(268ffce67515246499ec7515f372a20f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/01_Run_Combat_F_0_RM/Run_Combat_Start_F_0_RM.fbx using Guid(268ffce67515246499ec7515f372a20f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bbf55c41078660ade2ba1ab071f02d7d') in 0.0074273 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.641521 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/03_Run_Combat_F_R_45_RM/Run_Combat_Start_F_R_45_RM.fbx
+  artifactKey: Guid(714984d21a9dd5f489ec969ec2b35418) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/03_Run_Combat_F_R_45_RM/Run_Combat_Start_F_R_45_RM.fbx using Guid(714984d21a9dd5f489ec969ec2b35418) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '56e0169d099b18276bacb8c9b99a4582') in 0.0052359 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/11_Run_Fast_Combat_RM/Run_Combat_Start_Fast_B_L_RM.fbx
+  artifactKey: Guid(114c359388adfea44bd60461b9528f96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/11_Run_Fast_Combat_RM/Run_Combat_Start_Fast_B_L_RM.fbx using Guid(114c359388adfea44bd60461b9528f96) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9652a6a185b879d45cfc3db637c28d49') in 0.0060663 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/11_Run_Fast_Combat_RM/Run_Combat_Start_Fast_L_RM.fbx
+  artifactKey: Guid(7b99f21116441ff45a3d31d99c443de8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/11_Run_Fast_Combat_RM/Run_Combat_Start_Fast_L_RM.fbx using Guid(7b99f21116441ff45a3d31d99c443de8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b92086d3dc129cfae3b8836259f1ff98') in 0.0056317 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/06_Run_Combat_B_180_RM/Run_Combat_Stop_B_180_RM.fbx
+  artifactKey: Guid(15fce4922ee90d947a06634e147bcbf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/06_Run_Combat_B_180_RM/Run_Combat_Stop_B_180_RM.fbx using Guid(15fce4922ee90d947a06634e147bcbf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7972dd0c0da6a03bef9f72b1b01926d7') in 0.0069557 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/09_Run_Combat_B_L_90_RM/Run_Combat_Stop_B_L_90_RM.fbx
+  artifactKey: Guid(773036d0b8c79f54eb7b18a56d81e387) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/09_Run_Combat_B_L_90_RM/Run_Combat_Stop_B_L_90_RM.fbx using Guid(773036d0b8c79f54eb7b18a56d81e387) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '02def123a0bc890bebabb4573da72f81') in 0.0063105 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007086 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/10_Run_Combat_B_R_90_RM/Run_Combat_Stop_B_R_90_RM.fbx
+  artifactKey: Guid(a1ce8206b51da1a41aee3e6371822bce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/10_Run_Combat_B_R_90_RM/Run_Combat_Stop_B_R_90_RM.fbx using Guid(a1ce8206b51da1a41aee3e6371822bce) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c940ad3792990a1d3c057250b16db016') in 0.0062558 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/02_Run_Combat_F_L_45_RM/Run_Combat_Stop_F_L_45_RM.fbx
+  artifactKey: Guid(db0ec80901369284e86bdcf8ba4d1d70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/02_Run_Combat_F_L_45_RM/Run_Combat_Stop_F_L_45_RM.fbx using Guid(db0ec80901369284e86bdcf8ba4d1d70) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '722d78d0cf6dc2ec75d0365ccce1932a') in 0.0056401 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/04_Run_Combat_F_L_90_RM/Run_Combat_Stop_F_L_90_RM.fbx
+  artifactKey: Guid(b9626074c592c6b4db2277b114c5f23e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/04_Run_Combat_F_L_90_RM/Run_Combat_Stop_F_L_90_RM.fbx using Guid(b9626074c592c6b4db2277b114c5f23e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'acbe88d399b78355d9c8aac51bfc5b15') in 0.0057235 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/05_Run_Combat_F_R_90_RM/Run_Combat_Stop_F_R_90_RM.fbx
+  artifactKey: Guid(d829fa0cca0fb6d43b12a29adbe4865d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/FBX/04_Run/02_Run_Combat_RM/05_Run_Combat_F_R_90_RM/Run_Combat_Stop_F_R_90_RM.fbx using Guid(d829fa0cca0fb6d43b12a29adbe4865d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8001096719166b33815fabaa26450e75') in 0.006393 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.010474 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/04_Run_Combat_to_Run/Run_Combat_to_Run.anim
+  artifactKey: Guid(6f53ffbb464f03d48aa377296a2fedcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/04_Run_Combat_to_Run/Run_Combat_to_Run.anim using Guid(6f53ffbb464f03d48aa377296a2fedcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0123eb0719061a4a5ec16b1a0045b210') in 0.0183847 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.328149 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/05_Run_Combat_F_R_90_RM/Run_Combat_Stop_F_R_90_RM.anim
+  artifactKey: Guid(a71eb99c65598c044a630db8e5372c85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/05_Run_Combat_F_R_90_RM/Run_Combat_Stop_F_R_90_RM.anim using Guid(a71eb99c65598c044a630db8e5372c85) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0f6d9c91f833a2ad7f89f5f60931b5e6') in 0.0200932 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.816198 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/03_Run_Combat_F_R_45_RM/Run_Combat_Stop_F_R_45_RM.anim
+  artifactKey: Guid(67481d36efbda3b4096952e85b14b862) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/03_Run_Combat_F_R_45_RM/Run_Combat_Stop_F_R_45_RM.anim using Guid(67481d36efbda3b4096952e85b14b862) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5591ff8802d0395078e071e400a20823') in 0.020773 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.131066 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/04_Run_Combat_F_L_90_RM/Run_Combat_Stop_F_L_90_RM.anim
+  artifactKey: Guid(0465d1a328bfe79439d51c133b271513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/04_Run_Combat_F_L_90_RM/Run_Combat_Stop_F_L_90_RM.anim using Guid(0465d1a328bfe79439d51c133b271513) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '961c5c28402fadd079d7b20fcb27f076') in 0.0192998 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.087617 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/10_Run_Combat_B_R_90_RM/Run_Combat_Stop_B_R_90_RM.anim
+  artifactKey: Guid(5141f9c20320ced4a912cacd098b01be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/10_Run_Combat_B_R_90_RM/Run_Combat_Stop_B_R_90_RM.anim using Guid(5141f9c20320ced4a912cacd098b01be) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '344493099319934d331d72aa82312ede') in 0.0274517 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.307392 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/08_Run_Combat_B_R_45_RM/Run_Combat_Stop_B_R_45_RM.anim
+  artifactKey: Guid(3e4a07db6200e6f47a45423e755e14a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/08_Run_Combat_B_R_45_RM/Run_Combat_Stop_B_R_45_RM.anim using Guid(3e4a07db6200e6f47a45423e755e14a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7210a754c4366b9bf9d88454b644aac9') in 0.0261822 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.259813 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/09_Run_Combat_B_L_90_RM/Run_Combat_Stop_B_L_90_RM.anim
+  artifactKey: Guid(2fe5804f3eb0621489b0f97584ed1551) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/09_Run_Combat_B_L_90_RM/Run_Combat_Stop_B_L_90_RM.anim using Guid(2fe5804f3eb0621489b0f97584ed1551) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '04ce00ea9cd798b079316b7250c04ba6') in 0.0270261 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.761405 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/07_Run_Combat_B_L_45_RM/Run_Combat_Stop_B_L_45_RM.anim
+  artifactKey: Guid(c3d5f8c839158a94ab7257537c7d62ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/07_Run_Combat_B_L_45_RM/Run_Combat_Stop_B_L_45_RM.anim using Guid(c3d5f8c839158a94ab7257537c7d62ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bbb6ef494dfa1a31b65d6607cfd20689') in 0.0272398 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.559403 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/06_Run_Combat_B_180_RM/Run_Combat_Stop_B_180_RM.anim
+  artifactKey: Guid(4b50239089d469645a1f9ed70a206af1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/06_Run_Combat_B_180_RM/Run_Combat_Stop_B_180_RM.anim using Guid(4b50239089d469645a1f9ed70a206af1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c6445c18d559b1bc09615cab2341f537') in 0.0260289 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.471945 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/05_Run_Combat_F_R_90_RM/Run_Combat_Start_F_R_90_RM.anim
+  artifactKey: Guid(b6159d680abf99540b9ab73a38b3c5f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/05_Run_Combat_F_R_90_RM/Run_Combat_Start_F_R_90_RM.anim using Guid(b6159d680abf99540b9ab73a38b3c5f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bf4bd360ddad577ba327f2646a106fba') in 0.0137291 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.496406 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/03_Run_Combat_F_R_45_RM/Run_Combat_Start_F_R_45_RM.anim
+  artifactKey: Guid(3b67ef718ebe5d941930874aa580ba6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/03_Run_Combat_F_R_45_RM/Run_Combat_Start_F_R_45_RM.anim using Guid(3b67ef718ebe5d941930874aa580ba6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0449ca14a0b4102d36ba4022b751df2b') in 0.0134349 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.728556 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/10_Run_Combat_B_R_90_RM/Run_Combat_Start_B_R_90_RM.anim
+  artifactKey: Guid(859b93d0e2222e046b3be48757f14707) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/10_Run_Combat_B_R_90_RM/Run_Combat_Start_B_R_90_RM.anim using Guid(859b93d0e2222e046b3be48757f14707) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5d501280db8933f3f9fcbfdada48c0a5') in 0.007719 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.346178 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/08_Run_Combat_B_R_45_RM/Run_Combat_Start_B_R_45_RM.anim
+  artifactKey: Guid(7d5ed4a33dca3114c847e1621cbc5076) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/08_Run_Combat_B_R_45_RM/Run_Combat_Start_B_R_45_RM.anim using Guid(7d5ed4a33dca3114c847e1621cbc5076) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '67f6f2b04f651cf6c6bb765eabb46a17') in 0.0076235 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.545650 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/09_Run_Combat_B_L_90_RM/Run_Combat_Start_B_L_90_RM.anim
+  artifactKey: Guid(f705c807fc3eca24c9e186e5ab459b7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/09_Run_Combat_B_L_90_RM/Run_Combat_Start_B_L_90_RM.anim using Guid(f705c807fc3eca24c9e186e5ab459b7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dc8419fb82d67b826b1dc2de8742755b') in 0.0064345 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.170507 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/07_Run_Combat_B_L_45_RM/Run_Combat_Start_B_L_45_RM.anim
+  artifactKey: Guid(84517305b6a0d1d4092d48a563100702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/07_Run_Combat_B_L_45_RM/Run_Combat_Start_B_L_45_RM.anim using Guid(84517305b6a0d1d4092d48a563100702) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b0d87ccf9f85479713b0f736398df2b3') in 0.0069729 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.601586 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/06_Run_Combat_B_180_RM/Run_Combat_Start_B_180_RM.anim
+  artifactKey: Guid(a2d68827aaa9bc24e8bb24a31f7568a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/06_Run_Combat_B_180_RM/Run_Combat_Start_B_180_RM.anim using Guid(a2d68827aaa9bc24e8bb24a31f7568a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '96161eb3fa90d706e150bf387c6c75f2') in 0.0068618 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.089943 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/05_Run_Combat_F_R_90_RM/Run_Combat_Loop_F_R_90_RM.anim
+  artifactKey: Guid(f1ce2495195c9904aa5f3c97f261dbef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/05_Run_Combat_F_R_90_RM/Run_Combat_Loop_F_R_90_RM.anim using Guid(f1ce2495195c9904aa5f3c97f261dbef) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e029d2c773e2922df8d79a2a6333638d') in 0.0147567 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.703075 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/04_Run_Combat_F_L_90_RM/Run_Combat_Loop_F_L_90_RM.anim
+  artifactKey: Guid(0ea75238a7d2b1d49956a6dd6a5e2125) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/04_Run_Combat_F_L_90_RM/Run_Combat_Loop_F_L_90_RM.anim using Guid(0ea75238a7d2b1d49956a6dd6a5e2125) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '67acb346cbeb6b1cb3e80f64dc500e05') in 0.0154277 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.735375 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/10_Run_Combat_B_R_90_RM/Run_Combat_Loop_B_R_90_RM.anim
+  artifactKey: Guid(cb96cc0f1440b4b4da121b5fe733feed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/10_Run_Combat_B_R_90_RM/Run_Combat_Loop_B_R_90_RM.anim using Guid(cb96cc0f1440b4b4da121b5fe733feed) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6a9dc3348ab8b1def5726a7df8157395') in 0.014977 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.537057 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/08_Run_Combat_B_R_45_RM/Run_Combat_Loop_B_R_45_RM.anim
+  artifactKey: Guid(767a94e10ccd6c943b996d6e547cb0cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/08_Run_Combat_B_R_45_RM/Run_Combat_Loop_B_R_45_RM.anim using Guid(767a94e10ccd6c943b996d6e547cb0cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c6a3100602c63eba31a664931b5df4e1') in 0.0149684 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.604275 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/09_Run_Combat_B_L_90_RM/Run_Combat_Loop_B_L_90_RM.anim
+  artifactKey: Guid(50498abb021506f4fadb9f37aff3f7a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/09_Run_Combat_B_L_90_RM/Run_Combat_Loop_B_L_90_RM.anim using Guid(50498abb021506f4fadb9f37aff3f7a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '35f239e2040f69209c030187b3570b8a') in 0.0156325 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.215846 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/07_Run_Combat_B_L_45_RM/Run_Combat_Loop_B_L_45_RM.anim
+  artifactKey: Guid(b02772965b346e748a6ef56017e6668d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/07_Run_Combat_B_L_45_RM/Run_Combat_Loop_B_L_45_RM.anim using Guid(b02772965b346e748a6ef56017e6668d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '43ac244b67039f1663be1a17dd4bcc31') in 0.0152582 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.987609 seconds.
+  path: Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/06_Run_Combat_B_180_RM/Run_Combat_Loop_B_180_RM.anim
+  artifactKey: Guid(45f5ba11ecd104143b431231735d41de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Animation/Humanoid/04_Run/02_Run_Combat_RM/06_Run_Combat_B_180_RM/Run_Combat_Loop_B_180_RM.anim using Guid(45f5ba11ecd104143b431231735d41de) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2d0df53221e332c16724589c805ffeaf') in 0.014553 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 233.369383 seconds.
+  path: Assets/Player/Player_Anim/Combat_Anim/Idle_Anim/Idle_Combat_To_Idle.anim
+  artifactKey: Guid(3c41e88dcba2d8d4c84191a16076056e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player/Player_Anim/Combat_Anim/Idle_Anim/Idle_Combat_To_Idle.anim using Guid(3c41e88dcba2d8d4c84191a16076056e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fd4fe29504a167043552cd3be795ed96') in 0.0331189 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.625757 seconds.
+  path: Assets/Player/Player_Anim/Combat_Anim/Idle_Anim/Idle_To_Idle_Combat.anim
+  artifactKey: Guid(1ff407cd98ff88a4bbdf59bc78226470) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player/Player_Anim/Combat_Anim/Idle_Anim/Idle_To_Idle_Combat.anim using Guid(1ff407cd98ff88a4bbdf59bc78226470) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '57f772de0e5eb202ac788da680ac698f') in 0.0348773 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.740574 seconds.
+  path: Assets/Player/Player_Anim/Combat_Anim/Idle_Anim/Idle_Combat.anim
+  artifactKey: Guid(18292364169271e48a94f3072fc3b581) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Player/Player_Anim/Combat_Anim/Idle_Anim/Idle_Combat.anim using Guid(18292364169271e48a94f3072fc3b581) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd8ec7f5d62ebdd0b095739e982866b06') in 0.2161801 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 882.574312 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim
+  artifactKey: Guid(b41edabb4e8929940812acf2d6cb24c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim using Guid(b41edabb4e8929940812acf2d6cb24c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5f55395afa8a5ff7bcc883b6313ebb64') in 0.0005907 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.684312 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Idle_Idle_Combat.fbx
+  artifactKey: Guid(dc7b851d164d17d42ae054a1776533f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Idle_Idle_Combat.fbx using Guid(dc7b851d164d17d42ae054a1776533f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '32313ca085665ef65ff964540f245f0d') in 0.0008322 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.947227 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Attack_03_Combo_Attack_03
+  artifactKey: Guid(f176fd5ddf01f4441a6183e1ba69bbbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Attack_03_Combo_Attack_03 using Guid(f176fd5ddf01f4441a6183e1ba69bbbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cf5855fce75c705ccc8401d6963d4a3b') in 0.000811 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.050884 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Attack_03_Combo_Attack_03/Combo_Attack_03_01.fbx
+  artifactKey: Guid(118f13a8d4366b54a9249c3028c462fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Attack_03_Combo_Attack_03/Combo_Attack_03_01.fbx using Guid(118f13a8d4366b54a9249c3028c462fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dc4bb1352dec1c44223b1bee4d814ea0') in 0.0071578 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Attack_03_Combo_Attack_03/Combo_Attack_03_03.fbx
+  artifactKey: Guid(2eca4ca50aed7d1499770c5501f4e7d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Attack_03_Combo_Attack_03/Combo_Attack_03_03.fbx using Guid(2eca4ca50aed7d1499770c5501f4e7d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '83ae9eeb739312ee00a99dcaac3c8d71') in 0.0075648 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Attack_03_Combo_Attack_03/Combo_Attack_03_All.fbx
+  artifactKey: Guid(77b34f3857fbf354dad06890192005c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Attack_03_Combo_Attack_03/Combo_Attack_03_All.fbx using Guid(77b34f3857fbf354dad06890192005c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '07b56cd06ab4d212a6242d300671c85d') in 0.0124371 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.613541 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Attack_03_Combo_Attack_03/Combo_Attack_03_02.anim
+  artifactKey: Guid(46af6fba2305e51408e37a2aa2f2d078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Attack_03_Combo_Attack_03/Combo_Attack_03_02.anim using Guid(46af6fba2305e51408e37a2aa2f2d078) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '71ad865bcd5d823b1f0e158d94a3c4a0') in 0.031607 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 89.750455 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Angle_Variants
+  artifactKey: Guid(b0cf88adc515f904ba2bdac76ba82804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Angle_Variants using Guid(b0cf88adc515f904ba2bdac76ba82804) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a231b46f3592f9dc99ddb66b896d701a') in 0.0006677 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.464293 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Attack_01_Combo_Attack_01
+  artifactKey: Guid(95de08c97aec2dc4ab1934e34a70c2b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Attack_01_Combo_Attack_01 using Guid(95de08c97aec2dc4ab1934e34a70c2b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '479402783408052d2628f115487c3908') in 0.0006668 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.087863 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Attack_01_Combo_Attack_01/Combo_Attack_01_01.fbx
+  artifactKey: Guid(4ce3eea31d7703b4a93615833b1b85ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Attack_01_Combo_Attack_01/Combo_Attack_01_01.fbx using Guid(4ce3eea31d7703b4a93615833b1b85ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9dc2252cd00d8f07b79a1e0cb8427984') in 0.0072834 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Attack_01_Combo_Attack_01/Combo_Attack_01_03.fbx
+  artifactKey: Guid(648a27820edb2f54eb44116b0ae43927) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Attack_01_Combo_Attack_01/Combo_Attack_01_03.fbx using Guid(648a27820edb2f54eb44116b0ae43927) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b169fb2d95f3141586bd196814b38a60') in 0.0078964 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Attack_01_Combo_Attack_01/Combo_Attack_01_All.fbx
+  artifactKey: Guid(5d908a400acc7ab48a3a9e63d41acacd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Attack_01_Combo_Attack_01/Combo_Attack_01_All.fbx using Guid(5d908a400acc7ab48a3a9e63d41acacd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5ce0948082d8a0aef4d374cdd6079ba0') in 0.0141431 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.067866 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Attack_02_Combo_Attack_02
+  artifactKey: Guid(e47205f989424294ca58456bb7a7dd6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Attack_02_Combo_Attack_02 using Guid(e47205f989424294ca58456bb7a7dd6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3231db5804621c7e2a2b2eeb6a9c455a') in 0.0006572 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.096059 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Idle_Idle_To_Idle_Combat.fbx
+  artifactKey: Guid(7b6e9685e4955b646bfa0aa94019ef0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Idle_Idle_To_Idle_Combat.fbx using Guid(7b6e9685e4955b646bfa0aa94019ef0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '984d0b545ba3f24e44d3b0bb504b8595') in 0.0005928 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.906034 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Jump_01_Jump
+  artifactKey: Guid(12cb0389ca41bf0468f789a3fdf79de3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Jump_01_Jump using Guid(12cb0389ca41bf0468f789a3fdf79de3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '198e57cdaf9a1a153e74f9111a77a762') in 0.0012118 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.507249 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Run_01_Run_RM
+  artifactKey: Guid(65bdf24b2c2a71346b5112b620a41f2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Run_01_Run_RM using Guid(65bdf24b2c2a71346b5112b620a41f2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c36ed385034d3fb729672a3737137891') in 0.0007459 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.274437 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Run_04_Run_Combat_to_Run
+  artifactKey: Guid(a80e6d6f7685ad74aaf29459d705f0fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Run_04_Run_Combat_to_Run using Guid(a80e6d6f7685ad74aaf29459d705f0fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ca341225d4c66f9f79aa916eddabb43f') in 0.0005676 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.344683 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Run_03_Run_to_Run_Combat
+  artifactKey: Guid(d15a334bee3930647990ebda05b8248d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Run_03_Run_to_Run_Combat using Guid(d15a334bee3930647990ebda05b8248d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fa11af8cc39558b22ec18a7fc27f286d') in 0.0007555 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.553289 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Roll_03_Roll_to_Run
+  artifactKey: Guid(dcd12ee72d0d0c04d96291b936f2be85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Roll_03_Roll_to_Run using Guid(dcd12ee72d0d0c04d96291b936f2be85) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5799bfaf61b5431122d8d4817100959d') in 0.0005043 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.372598 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Roll_02_Roll_Combat
+  artifactKey: Guid(74933e203e5803f43b214f366a560a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Roll_02_Roll_Combat using Guid(74933e203e5803f43b214f366a560a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5c5dc9cc48458bbfc97404c2f0bb43d4') in 0.0006807 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.447898 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Roll_01_Roll
+  artifactKey: Guid(30dc4ab4bcd9c014ba4ac4e1468cf328) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Roll_01_Roll using Guid(30dc4ab4bcd9c014ba4ac4e1468cf328) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9debaf4273b096d621c6dc8f18d5ef9b') in 0.0005065 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.757774 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Run_02_Run_Combat_RM
+  artifactKey: Guid(86182ba6f38c19040953a7e26f85efde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Run_02_Run_Combat_RM using Guid(86182ba6f38c19040953a7e26f85efde) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ba638f5681f36b23ca8bbafd8e4a1a55') in 0.00077 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.816109 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Dodge_05_Dodge_to_Run/Dodge_to_Run_F.fbx
+  artifactKey: Guid(70e08f47453dfe243a91ef12a30609a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Dodge_05_Dodge_to_Run/Dodge_to_Run_F.fbx using Guid(70e08f47453dfe243a91ef12a30609a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4705b1cc435e39bc5fe832b3795ad19e') in 0.0051495 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Angle_Variants/Dodge_to_Run_F_R_45.fbx
+  artifactKey: Guid(e6c421d79eade6f45895c90cab6bcc73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Angle_Variants/Dodge_to_Run_F_R_45.fbx using Guid(e6c421d79eade6f45895c90cab6bcc73) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2537027a7fa06eaeecff0ebc897706a6') in 0.0074398 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Roll_04_Roll_Combat_to_Run/Roll_Combat_to_Run_B.fbx
+  artifactKey: Guid(213171ae11acb7f468b827746ffa0587) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Roll_04_Roll_Combat_to_Run/Roll_Combat_to_Run_B.fbx using Guid(213171ae11acb7f468b827746ffa0587) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '50771e24e5ba2dd57b7a84cdd0b6065a') in 0.0095596 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Angle_Variants/Roll_Combat_to_Run_F_L_45.fbx
+  artifactKey: Guid(e5263d03d8df2e14d92ffdf91b471daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Angle_Variants/Roll_Combat_to_Run_F_L_45.fbx using Guid(e5263d03d8df2e14d92ffdf91b471daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a9e78e23e3de452a6c551b4badf1b7ac') in 0.0076962 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Import/SwordAnimationPack/Combat_Anim/Roll_04_Roll_Combat_to_Run/Roll_Combat_to_Run_F.fbx
+  artifactKey: Guid(2fa5687eedfcd704da1cc7ae28df9e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Import/SwordAnimationPack/Combat_Anim/Roll_04_Roll_Combat_to_Run/Roll_Combat_to_Run_F.fbx using Guid(2fa5687eedfcd704da1cc7ae28df9e69) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ccd3e6cf1da9af4b479895f23d33c14d') in 0.0078853 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 145
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
