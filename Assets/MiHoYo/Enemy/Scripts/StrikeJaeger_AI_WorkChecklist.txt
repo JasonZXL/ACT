@@ -1,0 +1,279 @@
+StrikeJaeger AI 工作清单
+========================
+
+目标定位
+--------
+敌人定位：身手矫健、使用双刀、豹子风格的精英敌人。
+核心战斗风格：游击、突袭、短连段压迫、后撤重置、惩罚玩家贪刀。
+
+最终 AI 总流程
+--------------
+UpdateSelfState()
+UpdatePlayerPerception()
+UpdatePositionContext()
+UpdateCooldowns()
+UpdateMemory()
+UpdatePressure()
+
+if CanThink:
+    intent = SelectIntent()
+    action = SelectAction(intent)
+    ExecuteAction(action)
+
+
+阶段 1：基础可行动闭环
+----------------------
+[ ] 1. 自身状态模块
+    目标：记录 StrikeJaeger 当前能不能行动。
+    字段：
+    - IsDead
+    - IsAttacking
+    - IsRecovering
+    - IsHitStunned
+    - IsWitchTimeSlowed
+    - IsRetreating
+    - IsDodging
+    - CurrentAction
+    - CurrentIntent
+
+[ ] 2. 玩家状态感知模块
+    目标：读取玩家当前行为和关键资源。
+    第一版重点：
+    - PlayerDistance
+    - PlayerIsRunning
+    - PlayerIsAttacking
+    - PlayerIsDodging
+    - PlayerDodgeReady
+    后续扩展：
+    - PlayerIsInCombo
+    - PlayerHasBranchThreat
+    - PlayerIsRecovering
+
+[ ] 3. 位置关系模块
+    目标：距离只做辅助判断，不作为主要决策依据。
+    字段：
+    - DistanceBand: Far / Mid / Close / PointBlank
+    - AngleBand: Front / Side / Back
+    - IsPlayerInFront
+    - IsPlayerAtSide
+    - IsPlayerBehind
+    - HasLineOfSight
+    - PreferredStrafeDirection
+
+[ ] 4. 招式冷却模块
+    目标：防止敌人重复刷强招。
+    需要维护：
+    - Attack01Cooldown
+    - Attack02Cooldown
+    - Attack03Cooldown
+    - Attack04Cooldown
+    - Attack05Cooldown
+    - Attack06Cooldown
+    - DodgeCooldown
+    建议：
+    - Attack01 短冷却
+    - Attack02 中冷却
+    - Attack03 长冷却
+    - Attack04 短冷却
+    - Attack05 中冷却
+    - Attack06 长冷却
+
+[ ] 5. 动作执行模块
+    目标：只负责给 Animator 下命令，不负责思考。
+    职责：
+    - Set AttackIndex
+    - Set Attack Trigger
+    - Set MoveMode
+    - Set MoveDirection
+    - Set Dodge Trigger
+    - 锁定 CurrentAction
+    - 等待 AE_EnemyAttackFinished
+    - 记录动作开始/结束
+
+
+阶段 2：战斗记忆
+----------------
+[ ] 6. 攻击结果记忆模块
+    目标：记录敌人上一招发生了什么。
+    字段：
+    - LastAction
+    - LastAttackId
+    - LastAttackResult
+    - LastHitTime
+    - LastWhiffTime
+    - LastPerfectDodgedTime
+    - LastInterruptedTime
+    - ComboSuccessCount
+    - ConsecutiveWhiffCount
+    LastAttackResult:
+    - None
+    - Hit
+    - Whiff
+    - PerfectDodged
+    - Interrupted
+    - BlockedOrAvoided
+
+[ ] 7. 受击记忆模块
+    目标：记录敌人被玩家打成什么程度。
+    字段：
+    - LastHitReactType
+    - LastHitDirection
+    - RecentHitCount
+    - RecentLightHitCount
+    - RecentSmallHitCount
+    - RecentHeavyHitCount
+    - LastHitTime
+    - WasRecentlyLaunchedOrHeavyHit
+    受击类型：
+    - MicroHit
+    - SmallHitFront
+    - SmallHitBack
+    - HeavyHitFront
+    - HeavyHitBack
+
+[ ] 8. 攻击命中反馈模块
+    目标：从敌人攻击判定中记录命中结果。
+    监听：
+    - EnemyAttackHitboxController.EnemyAttackHitConfirmed
+    - EnemyAttackWarningWindow 的 PerfectDodgeTriggered
+    记录：
+    - 本次攻击是否命中
+    - 是否被完美闪避
+    - 是否落空
+    - 命中的玩家是谁
+
+[ ] 9. 玩家攻击反馈模块
+    目标：从玩家攻击命中中记录敌人受击信息。
+    监听：
+    - PlayerAttackHitboxController.PlayerAttackHitConfirmed
+    根据 attackId 转换为：
+    - MicroHit
+    - SmallHit
+    - HeavyHit
+
+
+阶段 3：节奏与意图
+------------------
+[ ] 10. 压力值模块
+    目标：把战斗节奏量化。
+    字段：
+    - PressureLevel
+    - ThreatenedLevel
+    - AggressionLevel
+    - RetreatDesire
+    - BurstDesire
+    示例变化规则：
+    - 敌人命中玩家 -> Pressure +1
+    - 敌人攻击落空 -> Pressure -1
+    - 敌人被轻微受击 -> Threatened +0.5
+    - 敌人被小受击 -> Threatened +1
+    - 敌人被大受击 -> Threatened +2
+    - 玩家闪避 CD 未好 -> Aggression +1
+    - 玩家正在追击 -> RetreatDesire +1
+    - 玩家站着等 CD -> PounceDesire +1
+
+[ ] 11. 意图选择模块
+    目标：根据上下文选择敌人当前想做什么。
+    意图：
+    - Observe
+    - Probe
+    - Pressure
+    - Pounce
+    - Burst
+    - Disengage
+    - Punish
+    - Reset
+    - Vulnerable
+    示例规则：
+    - 如果 IsHitStunned -> Vulnerable
+    - 如果 LastAttackResult == PerfectDodged -> Vulnerable
+    - 如果 ThreatenedLevel 高 -> Disengage
+    - 如果 PlayerDodgeReady == false 且 Aggression 高 -> Burst / Pounce
+    - 如果玩家远离且敌人压力中高 -> Pounce
+    - 如果玩家贴脸追击 -> Disengage / Punish
+    - 默认 -> Probe / Pressure
+
+[ ] 12. 招式选择模块
+    目标：根据意图选择具体动作。
+    映射：
+    - Probe: Attack01
+    - Pressure: Attack01 / Attack05
+    - Pounce: Attack02
+    - Burst: Attack03
+    - Disengage: Attack04 / Attack06 / Dodge_L / Dodge_R
+    - Punish: Attack04 / Attack02 / Attack05
+    - Reset: Attack06 / Run / Strafe
+    - Vulnerable: Recover / no action
+    距离修正：
+    - Pounce + Far/Mid -> Attack02
+    - Disengage + Close -> Attack04
+    - Disengage + 连续被压制 -> Attack06
+    - Pressure + Close -> Attack05
+    - Burst + Mid/Close -> Attack03
+
+
+阶段 4：移动与表现
+------------------
+[ ] 13. 移动选择模块
+    目标：让敌人不站桩，形成豹式游击感。
+    可用动作：
+    - Walk_F
+    - Walk_B
+    - Walk_L
+    - Walk_R
+    - Run_Start
+    - Run_Loop
+    - Run_End
+    - Dodge
+    - Dodge_L
+    - Dodge_R
+    移动意图：
+    - StrafeLeft
+    - StrafeRight
+    - Approach
+    - Backstep
+    - RetreatRun
+    - HoldGround
+
+[ ] 14. 调试可视化模块
+    目标：让 AI 行为可观察、可调试。
+    显示：
+    - CurrentIntent
+    - CurrentAction
+    - PressureLevel
+    - ThreatenedLevel
+    - LastAttackResult
+    - LastHitReactType
+    - PlayerDistance
+    - PlayerDodgeReady
+    - ActionCooldowns
+
+
+开发顺序
+------------
+第一阶段：
+自身状态 + 玩家感知 + 位置关系 + 冷却 + 动作执行
+目标：敌人能稳定按条件出 Attack01 / Attack02 / Attack04 / Attack06。
+
+第二阶段：
+攻击结果记忆 + 受击记忆 + 攻击命中反馈 + 玩家攻击反馈
+目标：敌人知道自己命中、落空、被打、被完美闪避。
+
+第三阶段：
+压力值 + 意图选择 + 招式选择
+目标：敌人开始有游击 + 突袭的性格。
+
+第四阶段：
+移动选择 + 调试可视化
+目标：敌人不站桩，能绕侧、拉开、再突袭。
+
+
+暂定目标体验
+------------
+玩家追击
+-> StrikeJaeger 侧闪或 Attack04 小后撤投掷
+-> 玩家闪避成功进入魔女时间
+-> 玩家打一套
+-> StrikeJaeger 使用 Attack06 大后撤重置
+-> 玩家读出套路并反制
+-> StrikeJaeger 根据命中、落空、被打、被完美闪避调整节奏
